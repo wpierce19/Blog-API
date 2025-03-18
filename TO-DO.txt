@@ -1,0 +1,63 @@
+TO-DO list:
+
+Passport:
+-implement passport functionality for logging user in
+-Check previous projects and see if we have pre-existing
+-passport config.
+
+Controllers:
+-Implement functionality for authController
+    - validateSignUp function
+        -Will verify that user doesn't exist(like the email)
+    -userSignUp function
+        -Will use validatesignup to check email
+        -Then will use bcrypt to hash the password
+        -Will add new user to database
+    -userLogin
+        -Use passport to authenticate(passport.js)
+        -Create the payload to return to consumer(front-end)
+        -will use JWT to sign a token(this is where the payload comes into play)
+-Implement functionality for postController
+    -This controller handles all processing for posts
+        -Comments
+            -(delete if user is ADMIN or Posts author)
+            -Create
+            -Update
+        -Posts
+            -Update(If user is Admin or Posts author)
+            -Create
+            -Get All posts
+            -Get post by Id
+                -Can be author or the posts unique Id
+            -Delete Post(If user is Admin or Posts author)
+-Ensure all functions are asynchronous
+    -Allows for efficient and timely loading
+    -Better experience for user
+
+Middlewares:
+-authenticateToken
+    -JWT token verification
+-setPublished
+    -Will set that the post has been setPublished
+    -Will be used so the front-end only displays
+    -Published posts
+
+Prisma:
+-Schema
+    -Setup the databases Schema
+    -Can use Prisma's view command to verify structure
+    -Can refence previous Schemas
+
+app.js
+-Setup as usual
+
+README.md
+Make sure to update will all utilized technologies
+and their uses
+
+TIPS:
+It is okay to reference online help
+Can utilized Postman to veirfy functioning backend
+Try to implement Testing practices
+IT IS OKAY TO TAKE YOUR TIME ON THIS.....
+
