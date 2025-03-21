@@ -5,7 +5,7 @@ Passport:
 -Check previous projects and see if we have pre-existing
 -passport config.
 
-Controllers:
+Controllers: (DONE)
 -Implement functionality for authController(DONE)
     - validateSignUp function(DONE)
         -Will verify that user doesn't exist(like the email)
@@ -25,9 +25,9 @@ Controllers:
             -Update
         -Posts
             -Update(If user is Admin or Posts author)
-            -Create
-            -Get All posts
-            -Get post by Id
+            -Create(DONE)
+            -Get All posts(DONE)
+            -Get post by Id(DONE)
                 -Can be author or the posts unique Id
             -Delete Post(If user is Admin or Posts author)
 -Ensure all functions are asynchronous
