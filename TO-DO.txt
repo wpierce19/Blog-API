@@ -19,7 +19,7 @@ Controllers: (DONE)
         -will use JWT to sign a token(this is where the payload comes into play)
 -Implement functionality for postController
     -This controller handles all processing for posts
-        -Comments
+        -Comments(DONE)
             -(delete if user is ADMIN or Posts author)
             -Create
             -Update
@@ -34,7 +34,7 @@ Controllers: (DONE)
     -Allows for efficient and timely loading
     -Better experience for user
 
-Middlewares:
+Middlewares: (DONE)
 -authenticateToken
     -JWT token verification
 -setPublished
@@ -48,8 +48,13 @@ Prisma: (DONE)
     -Can use Prisma's view command to verify structure
     -Can refence previous Schemas
 
-app.js
+app.js(DONE)
 -Setup as usual
+
+routes:
+authRouter
+index.js
+postRouter
 
 README.md
 Make sure to update will all utilized technologies
