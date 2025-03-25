@@ -1,12 +1,14 @@
-const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy;
-const {PrismaClient} = require("@prisma/client");
-const bcrypt = require("bcryptjs");
+import passport from "passport";
+import { Strategy as LocalStrategy } from "passport-local";
+import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcryptjs";
+
+const prisma = new PrismaClient();
 
 passport.use(new LocalStrategy(
     async (username, password, done) => {
         try {
-            const user = await Prisma.user.findUnique({where: {username}});
+            const user = await prisma.user.findUnique({where: {username}});
             if (!user) return done(null, false, {message: 'Incorrect Username'});
             const isValid = await bcrypt.compare(password, user.password);
             if (!isValid) return done(null, false, {message: 'Incorrect Password'});
