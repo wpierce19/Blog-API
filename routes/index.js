@@ -1,5 +1,5 @@
-import postRouter from "./postRouter";
-import authRouter from "./authRouter";
+import postRouter from "./postRouter.js";
+import authRouter from "./authRouter.js";
 
 export default {
     postRouter,
