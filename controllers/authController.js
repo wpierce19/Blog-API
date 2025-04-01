@@ -29,6 +29,7 @@ const userSignUp = [
     asyncHandler(async (req,res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
+            console.log("Validation errors:", errors.array());
             return res.status(409).send({errors: errors.array()});
         }
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
